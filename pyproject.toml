@@ -1,0 +1,21 @@
+[project]
+name = "meetup-duckdb-parquet"
+version = "0.1.0"
+description = "Project used for the presentation at the Meetup Python Rennes"
+readme = "README.md"
+authors = [
+    { name = "Michel Caradec", email = "mcaradec@proton.me" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "duckdb>=2.0.0",
+    "duckdb-engine>=0.17.0",
+    "faker>=40.43.0",
+    "ipykernel>=7.4.0",
+    "jupysql>=0.11.1",
+    "pandas>=3.0.6",
+    "purejq>=0.3.1",
+]
+
+[tool.uv]
+package = false

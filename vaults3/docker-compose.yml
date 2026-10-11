@@ -1,0 +1,22 @@
+# https://www.vaults3.com/
+# https://github.com/Kodiqa-Solutions/VaultS3
+
+services:
+  vaults3:
+    image: eniz1806/vaults3:latest
+    container_name: vaults3
+    restart: 'unless-stopped'
+    volumes:
+      - vaults3-data:/data
+      - vaults3-metadata:/metadata
+    ports:
+      # Dashboard: http://localhost:9999/dashboard/
+      - "9999:9000"
+    env_file:
+      - ./vaults3.env
+
+volumes:
+  vaults3-data:
+    driver: local
+  vaults3-metadata:
+    driver: local
